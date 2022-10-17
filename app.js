@@ -26,15 +26,15 @@ const Item = mongoose.model("Item", itemSchema);
 
 
 const item1 = new Item({
-  name: "Buy Food"
+  name: "Study"
 });
 
 const item2 = new Item({
-  name: "Cook Food"
+  name: "Exercise"
 });
 
 const item3 = new Item({
-  name: "Eat Food"
+  name: "Read a book"
 });
 
 const defaultItems = [item1, item2, item3];
@@ -204,3 +204,8 @@ if (port == null || port == "") {
 app.listen(port, function () {
   console.log("Server started on port 3000");
 });
+
+
+
+// Export the Express API
+module.exports = app;
